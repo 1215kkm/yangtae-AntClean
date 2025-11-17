@@ -62,6 +62,13 @@ header {
     align-items: center;
     gap: 5px;
 }
+.header-info a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    text-decoration: none;
+}
 
 .header-main {
     background: var(--white);
