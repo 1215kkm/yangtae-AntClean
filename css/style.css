@@ -409,6 +409,7 @@ nav > a.active::after,
             margin-bottom: 20px;
             opacity: 0.9;
         }
+        .hero-subtitle span {color: #ffd900; font-weight: bold;}
 
         .hero-title {
             font-size: 72px;
