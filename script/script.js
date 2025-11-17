@@ -3,7 +3,7 @@
 // Header와 Footer 로드
 document.addEventListener('DOMContentLoaded', function() {
     // Header 로드
-    fetch('header.html')
+    fetch('include/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Header 로드 실패:', error));
 
     // Footer 로드
-    fetch('footer.html')
+    fetch('include/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer').innerHTML = data;
