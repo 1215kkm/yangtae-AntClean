@@ -16,342 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <style>
-        /* 페이지별 스타일 */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.3;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            color: var(--white);
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .hero-title {
-            font-size: 72px;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 30px;
-        }
-
-        .hero-description {
-            font-size: 20px;
-            line-height: 1.8;
-            margin-bottom: 50px;
-            opacity: 0.95;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Quick Menu */
-        .quick-menu {
-            background: var(--white);
-            padding: 0;
-            position: relative;
-            margin-top: -80px;
-            z-index: 10;
-        }
-
-        .quick-menu-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .quick-menu-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0;
-            background: var(--white);
-            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .quick-item {
-            padding: 40px 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            border-right: 1px solid var(--gray-light);
-        }
-
-        .quick-item:last-child {
-            border-right: none;
-        }
-
-        .quick-item:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .quick-item:hover .quick-icon {
-            background: var(--white);
-            color: var(--primary-blue);
-        }
-
-        .quick-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--light-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            transition: all 0.3s;
-        }
-
-        .quick-icon .material-icons {
-            font-size: 40px;
-            color: var(--primary-blue);
-        }
-
-        .quick-item h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .quick-item p {
-            font-size: 14px;
-            color: var(--gray);
-        }
-
-        .quick-item:hover p {
-            color: var(--white);
-        }
-
-        /* Stats Section */
-        .stats-section {
-            padding: 100px 40px;
-            background: var(--gray-light);
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stats-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .stat-item {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .stat-number {
-            font-size: 56px;
-            font-weight: 900;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: var(--gray);
-            font-weight: 500;
-        }
-
-        .stat-bar {
-            width: 100%;
-            height: 8px;
-            background: var(--gray-light);
-            border-radius: 10px;
-            margin-top: 20px;
-            overflow: hidden;
-        }
-
-        .stat-bar-fill {
-            height: 100%;
-            background: var(--primary-blue);
-            border-radius: 10px;
-        }
-
-        /* Services Section */
-        .services-section {
-            padding: 100px 40px;
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* News Section */
-        .news-section {
-            padding: 100px 40px;
-            background: var(--gray-light);
-        }
-
-        .news-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto 60px;
-        }
-
-        .news-header h2 {
-            font-size: 48px;
-            font-weight: 900;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .news-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .news-card:hover .news-image img {
-            transform: scale(1.05);
-        }
-
-        .news-content {
-            padding: 25px;
-        }
-
-        .news-date {
-            font-size: 14px;
-            color: var(--primary-blue);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .news-content h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            color: var(--black);
-        }
-
-        .news-content p {
-            font-size: 14px;
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .news-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .quick-menu-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 42px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .quick-menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .services-grid,
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -362,7 +26,7 @@
         <div class="hero-background"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-subtitle">No.1 청소 전문 기업</p>
+                <p class="hero-subtitle">No.1 청소 및 시설관리 전문 기업</p>
                 <h1 class="hero-title">보이지 않는 곳까지<br>완벽하게</h1>
                 <p class="hero-description">일개미는 고객의 공간을 단순한 작업 대상이 아닌 책임져야 할 결과물로 생각합니다. 15년의 경험과 전문성으로 최상의 청소 서비스를 제공합니다.</p>
                 <div class="hero-buttons">
@@ -383,6 +47,13 @@
     <section class="quick-menu">
         <div class="quick-menu-container">
             <div class="quick-menu-grid">
+                <div class="quick-item" onclick="location.href='service-complex.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">location_city</span>
+                    </div>
+                    <h3>시설관리</h3>
+                    <p>정기 관리</p>
+                </div>
                 <div class="quick-item" onclick="location.href='service-exterior.html'">
                     <div class="quick-icon">
                         <span class="material-icons">apartment</span>
@@ -411,13 +82,6 @@
                     <h3>입주청소</h3>
                     <p>주거 공간 관리</p>
                 </div>
-                <div class="quick-item" onclick="location.href='service-complex.html'">
-                    <div class="quick-icon">
-                        <span class="material-icons">location_city</span>
-                    </div>
-                    <h3>단지관리</h3>
-                    <p>정기 관리</p>
-                </div>
             </div>
         </div>
     </section>
@@ -427,7 +91,7 @@
         <div class="stats-container">
             <div class="stats-header">
                 <span class="section-badge">NO.1</span>
-                <h2>대한민국 청소 전문 기업</h2>
+                <h2>대한민국 시설관리 전문 기업</h2>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
@@ -465,11 +129,12 @@
     <!-- Services Section -->
     <section class="services-section">
         <div class="section-header">
-            <h2>전문 서비스</h2>
+            <h2>일개미 전문 서비스</h2>
             <p>일개미의 모든 서비스는 철저한 안전 관리와 전문 기술로 진행됩니다</p>
         </div>
         <div class="tabs">
             <button class="tab-btn active">전체</button>
+            <button class="tab-btn">시설관리</button>
             <button class="tab-btn">외벽청소</button>
             <button class="tab-btn">특수청소</button>
             <button class="tab-btn">입주청소</button>
