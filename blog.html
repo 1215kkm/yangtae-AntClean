@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청소백과 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="breadcrumb">
+            <a href="index.html">홈</a>
+            <span>›</span>
+            <span>청소백과</span>
+        </div>
+        <div class="page-header-content">
+            <h1>청소백과</h1>
+            <p>청소 전문가가 알려주는 유용한 정보와 팁</p>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <!-- Filter Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active">전체</button>
+                <button class="tab-btn">청소 팁</button>
+                <button class="tab-btn">관리 가이드</button>
+                <button class="tab-btn">업계 소식</button>
+                <button class="tab-btn">FAQ</button>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="blog-wrap">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" 
+                     alt="Featured" 
+                     style="width: 100%; border-radius: 15px;">
+                <div>
+                    <div style="display: inline-block; padding: 5px 15px; background: var(--primary-blue); color: white; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 15px;">
+                        추천 글
+                    </div>
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 20px;">외벽청소, 왜 전문가에게 맡겨야 할까?</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 25px;">
+                        고층 건물의 외벽청소는 단순히 유리창을 닦는 것이 아닙니다. 전문 장비와 안전 관리, 
+                        그리고 외장재별 맞춤 기술이 필요한 전문 작업입니다.
+                    </p>
+                    <a href="#" class="btn btn-blue">
+                        자세히 읽기
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">청소 팁</span>
+                        <h3>겨울철 결로 현상, 어떻게 관리해야 할까?</h3>
+                        <p>온도 차이로 발생하는 결로를 예방하고 관리하는 방법을 소개합니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.11.15</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 1,234</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">관리 가이드</span>
+                        <h3>특수청소가 필요한 5가지 상황</h3>
+                        <p>일반 청소로는 해결되지 않는 상황들을 전문가가 설명합니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.11.10</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 2,456</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">청소 팁</span>
+                        <h3>준공청소 체크리스트 완벽 가이드</h3>
+                        <p>입주 전 꼭 확인해야 할 준공청소 포인트를 정리했습니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.11.05</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 3,789</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">관리 가이드</span>
+                        <h3>새집 입주 전 청소, 꼭 필요할까?</h3>
+                        <p>신축 아파트도 입주 전 청소가 필요한 이유를 알아봅니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.10.28</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 1,567</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">업계 소식</span>
+                        <h3>2024년 건물 관리법 개정안</h3>
+                        <p>건물 외벽 청소 관련 법규 변경 사항을 정리했습니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.10.20</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 2,890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">청소 팁</span>
+                        <h3>유리창 물때, 완벽하게 제거하는 방법</h3>
+                        <p>집에서도 할 수 있는 유리창 물때 제거 방법을 소개합니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.10.15</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 4,567</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">관리 가이드</span>
+                        <h3>곰팡이 예방을 위한 환기 방법</h3>
+                        <p>곰팡이가 생기기 전 미리 예방하는 실내 환기 팁입니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.10.08</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 3,234</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">FAQ</span>
+                        <h3>청소 전문가가 답하는 Q&A</h3>
+                        <p>고객님들이 가장 궁금해하시는 질문들에 대한 답변 모음입니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.10.01</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 5,123</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=400&q=80" alt="Blog">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">청소 팁</span>
+                        <h3>친환경 청소 세제 활용법</h3>
+                        <p>아이와 반려동물이 있는 집을 위한 친환경 청소 가이드입니다.</p>
+                        <div class="blog-meta">
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">calendar_today</span> 2024.09.25</span>
+                            <span><span class="material-icons" style="font-size: 16px; vertical-align: middle;">visibility</span> 2,678</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div style="text-align: center; margin-top: 60px;">
+                <div style="display: inline-flex; gap: 10px;">
+                    <button class="btn" style="padding: 10px 20px; background: var(--gray-light); color: var(--black);">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <button class="btn" style="padding: 10px 20px; background: var(--primary-blue); color: white;">1</button>
+                    <button class="btn" style="padding: 10px 20px; background: var(--gray-light); color: var(--black);">2</button>
+                    <button class="btn" style="padding: 10px 20px; background: var(--gray-light); color: var(--black);">3</button>
+                    <button class="btn" style="padding: 10px 20px; background: var(--gray-light); color: var(--black);">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); padding: 80px 60px; border-radius: 15px; text-align: center; color: white;">
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 20px;">뉴스레터 구독</h2>
+                    <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.95;">
+                        매주 유용한 청소 팁과 관리 정보를 이메일로 받아보세요
+                    </p>
+                    <form onsubmit="handleNewsletter(event)" style="display: flex; gap: 15px;">
+                        <input type="email" 
+                               placeholder="이메일 주소를 입력하세요" 
+                               required
+                               style="flex: 1; padding: 18px 25px; border: none; border-radius: 50px; font-size: 16px;">
+                        <button type="submit" class="btn btn-primary" style="padding: 18px 40px; white-space: nowrap;">
+                            <span class="material-icons">send</span>
+                            구독하기
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Posts Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">POPULAR</span>
+                <h2>인기 게시물</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                <div style="cursor: pointer;">
+                    <div style="font-size: 48px; font-weight: 900; color: var(--primary-blue); margin-bottom: 15px;">01</div>
+                    <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">외벽청소 안전 관리</h4>
+                    <p style="color: var(--gray); font-size: 14px;">조회수 8,765</p>
+                </div>
+
+                <div style="cursor: pointer;">
+                    <div style="font-size: 48px; font-weight: 900; color: var(--primary-blue); margin-bottom: 15px;">02</div>
+                    <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">준공청소 체크리스트</h4>
+                    <p style="color: var(--gray); font-size: 14px;">조회수 7,234</p>
+                </div>
+
+                <div style="cursor: pointer;">
+                    <div style="font-size: 48px; font-weight: 900; color: var(--primary-blue); margin-bottom: 15px;">03</div>
+                    <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">곰팡이 제거 방법</h4>
+                    <p style="color: var(--gray); font-size: 14px;">조회수 6,890</p>
+                </div>
+
+                <div style="cursor: pointer;">
+                    <div style="font-size: 48px; font-weight: 900; color: var(--primary-blue); margin-bottom: 15px;">04</div>
+                    <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px;">친환경 청소 가이드</h4>
+                    <p style="color: var(--gray); font-size: 14px;">조회수 5,567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

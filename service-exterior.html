@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외벽청소 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Service Hero -->
+    <div class="service-hero">
+        <div class="service-hero-content">
+            <h1>외벽청소</h1>
+            <p>고층 건물 외벽의 유리, 석재, 금속 패널을 전문 장비와 기술로 안전하게 관리합니다</p>
+            <div class="breadcrumb">
+                <a href="index.html">홈</a>
+                <span>›</span>
+                <a href="services.html">서비스</a>
+                <span>›</span>
+                <span>외벽청소</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Service LNB -->
+    <section class="service-lnb-wrapper">
+        <div class="service-lnb-container">
+            <div class="service-lnb">
+                <a href="service-exterior.html" class="lnb-item" data-service="exterior">
+                    <span class="material-icons">apartment</span>
+                    <span>외벽청소</span>
+                </a>
+                <a href="service-special.html" class="lnb-item" data-service="special">
+                    <span class="material-icons">home_repair_service</span>
+                    <span>특수청소</span>
+                </a>
+                <a href="service-construction.html" class="lnb-item" data-service="construction">
+                    <span class="material-icons">construction</span>
+                    <span>준공청소</span>
+                </a>
+                <a href="service-residential.html" class="lnb-item" data-service="residential">
+                    <span class="material-icons">home</span>
+                    <span>상가/주거청소</span>
+                </a>
+                <a href="service-complex.html" class="lnb-item" data-service="complex">
+                    <span class="material-icons">location_city</span>
+                    <span>단지/시설청소</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="content-container">
+            <div class="content-service">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" 
+                         alt="외벽청소" >
+                </figure>
+                <div>
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 30px;">전문 외벽청소 서비스</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 20px;">
+                        일개미 청소는 15년간 축적된 고층 외벽청소 노하우로 안전하고 완벽한 결과를 제공합니다. 
+                        로프 액세스 전문 기술진과 최신 고소작업차를 활용하여 어떤 높이의 건물도 깨끗하게 관리합니다.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 30px;">
+                        유리 외벽뿐만 아니라 석재, 금속 패널, 타일 등 다양한 외장재에 맞는 
+                        전문 세제와 기술을 적용하여 건물의 가치를 높입니다.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-blue">
+                            <span class="material-icons">description</span>
+                            견적 문의
+                        </a>
+                        <a href="portfolio.html" class="btn" style="background: var(--gray-light); color: var(--black);">
+                            <span class="material-icons">photo_library</span>
+                            작업 사례
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Features -->
+            <div class="section-header">
+                <span class="section-badge">FEATURES</span>
+                <h2>외벽청소 특징</h2>
+            </div>
+
+            <div class="service-features">
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>안전 제일</h3>
+                        <p>산업안전보건법에 따른 철저한 안전 관리 시스템 운영. 작업자 보험 가입 및 정기 안전 교육 실시</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">engineering</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>전문 기술진</h3>
+                        <p>로프 액세스 자격증 보유 전문가와 고소작업 경력 5년 이상의 숙련된 기술진이 작업</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">construction</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>최신 장비</h3>
+                        <p>고소작업차, 곤돌라, 로프 액세스 등 건물 구조에 맞는 최적의 장비 활용</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">eco</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>친환경 세제</h3>
+                        <p>외장재를 손상시키지 않는 전용 친환경 세제 사용으로 오래도록 깨끗하게 유지</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>정기 관리</h3>
+                        <p>연간 계약을 통한 정기 관리 서비스로 건물을 항상 깨끗하게 유지</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">verified</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>품질 보증</h3>
+                        <p>작업 후 만족도 확인 및 사후 관리. 문제 발생 시 즉시 재작업 보장</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PROCESS</span>
+                <h2>작업 진행 과정</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>현장 조사</h3>
+                    <p>건물 규모, 외장재 종류, 오염 상태 등을 정밀 조사</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>안전 계획</h3>
+                    <p>작업 방법 결정 및 안전 관리 계획 수립</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>사전 준비</h3>
+                    <p>장비 설치 및 주변 보호 조치 실시</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>본 작업</h3>
+                    <p>전문 세제로 세척 후 고압 물 세척 진행</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PRICE</span>
+                <h2>외벽청소 가격</h2>
+                <p>건물 규모와 오염도에 따라 상이하며, 정확한 견적은 현장 조사 후 제공됩니다</p>
+            </div>
+
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                            <th>참고 가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">일반 외벽</td>
+                            <td>유리, 알루미늄 패널 등</td>
+                            <td><span class="price">3,000원~/㎡</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">석재 외벽</td>
+                            <td>화강석, 대리석 등</td>
+                            <td><span class="price">4,000원~/㎡</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">특수 외장재</td>
+                            <td>티타늄, 특수 도료 등</td>
+                            <td><span class="price">5,000원~/㎡</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">정기 계약</td>
+                            <td>연 2~4회 정기 관리</td>
+                            <td><span class="price">협의</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--light-blue); padding: 30px; border-radius: 15px; margin-top: 30px;">
+                <p style="text-align: center; color: var(--gray-dark); font-weight: 600;">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 10px;">info</span>
+                    위 가격은 참고용이며, 현장 상황에 따라 변동될 수 있습니다. 정확한 견적은 현장 조사 후 제공됩니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>자주 묻는 질문</h2>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>외벽청소는 얼마나 자주 해야 하나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            건물의 위치와 주변 환경에 따라 다르지만, 일반적으로 연 2~4회 정기적인 외벽청소를 권장합니다. 
+                            도심이나 공업지역의 경우 오염이 빠르므로 더 자주 관리하는 것이 좋습니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>작업 시 안전은 어떻게 보장되나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            모든 작업자는 로프 액세스 자격증을 보유하고 있으며, 산업안전보건법에 따른 안전 교육을 정기적으로 받습니다. 
+                            또한 작업자 보험에 가입되어 있어 만일의 사고에 대비하고 있습니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>날씨의 영향을 받나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            외벽청소는 날씨의 영향을 많이 받습니다. 비, 눈, 강풍 시에는 안전을 위해 작업을 진행하지 않으며, 
+                            날씨가 좋은 날로 일정을 조정합니다. 작업 전 기상 예보를 확인하여 최적의 날짜를 선정합니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>유리창에 물얼룩이 생기지 않나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            전문 외벽청소용 세제와 정수된 물을 사용하여 물얼룩을 최소화합니다. 
+                            또한 스퀴지와 극세사 천을 이용한 2단계 마무리로 깨끗한 결과를 보장합니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>실내 작업도 가능한가요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            네, 가능합니다. 외벽청소 시 실내에서 접근이 필요한 경우 실내 작업도 함께 진행합니다. 
+                            실내 바닥과 가구 보호를 위한 양생 작업을 철저히 하므로 안심하셔도 됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: var(--white); text-align: center;">
+        <div class="content-container">
+            <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 20px;">외벽청소 견적 문의</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.95;">무료 현장 조사 및 상담을 받아보세요</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="material-icons">description</span>
+                    무료 견적 받기
+                </a>
+                <a href="tel:1588-0000" class="btn btn-outline">
+                    <span class="material-icons">phone</span>
+                    1588-0000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

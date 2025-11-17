@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상가/주거청소 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Service Hero -->
+    <div class="service-hero">
+        <div class="service-hero-content"">
+            <h1>상가/주거청소</h1>
+            <p>주거 공간과 상업 공간의 입주, 이사, 정기 청소를 깨끗하게 관리합니다</p>
+            <div class="breadcrumb">
+                <a href="index.html">홈</a>
+                <span>›</span>
+                <a href="services.html">서비스</a>
+                <span>›</span>
+                <span>상가/주거청소</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Service LNB -->
+    <section style="background: var(--white); border-bottom: 2px solid var(--gray-light); position: sticky; top: 120px; z-index: 100;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+            <div class="service-lnb">
+                <a href="service-exterior.html" class="lnb-item" data-service="exterior">
+                    <span class="material-icons">apartment</span>
+                    <span>외벽청소</span>
+                </a>
+                <a href="service-special.html" class="lnb-item" data-service="special">
+                    <span class="material-icons">home_repair_service</span>
+                    <span>특수청소</span>
+                </a>
+                <a href="service-construction.html" class="lnb-item" data-service="construction">
+                    <span class="material-icons">construction</span>
+                    <span>준공청소</span>
+                </a>
+                <a href="service-residential.html" class="lnb-item" data-service="residential">
+                    <span class="material-icons">home</span>
+                    <span>상가/주거청소</span>
+                </a>
+                <a href="service-complex.html" class="lnb-item" data-service="complex">
+                    <span class="material-icons">location_city</span>
+                    <span>단지/시설청소</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="content-container">
+            <div class="content-service">
+                <figure>
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 30px;">주거 & 상가 청소</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 20px;">
+                        입주 전 청소, 이사 후 청소, 정기 청소 등 주거 공간의 모든 청소 서비스를 제공합니다. 
+                        아파트, 빌라, 원룸부터 사무실, 매장까지 다양한 공간을 관리합니다.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 30px;">
+                        깨끗한 공간에서의 새로운 시작을 위해 전문가의 손길로 완벽하게 청소해드립니다.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-blue">
+                            <span class="material-icons">description</span>
+                            견적 문의
+                        </a>
+                        <a href="tel:1588-0000" class="btn" style="background: var(--gray-light); color: var(--black);">
+                            <span class="material-icons">phone</span>
+                            전화 상담
+                        </a>
+                    </div>
+                </figure>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80" 
+                         alt="주거청소" >
+                </div>
+            </div>
+
+            <!-- Service Types -->
+            <div class="section-header">
+                <span class="section-badge">SERVICE TYPES</span>
+                <h2>서비스 종류</h2>
+            </div>
+
+            <div class="service-features">
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">home</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>입주 청소</h3>
+                        <p>새집 입주 전 먼지, 오염물 제거 및 전반적인 청소</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">local_shipping</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>이사 청소</h3>
+                        <p>이사 전후 청소로 빠른 정리를 도와드립니다</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">event_repeat</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>정기 청소</h3>
+                        <p>주 1회, 월 1회 등 정기적인 청소 관리</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">store</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>상가 청소</h3>
+                        <p>사무실, 매장, 카페 등 상업 공간 청소</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">weekend</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>가구 청소</h3>
+                        <p>소파, 매트리스, 커튼 등 섬유류 청소</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">ac_unit</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>환기 시설</h3>
+                        <p>에어컨, 환풍기 필터 청소</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PROCESS</span>
+                <h2>작업 진행 과정</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>예약 및 상담</h3>
+                    <p>전화나 온라인으로 간편하게 예약</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>방문 확인</h3>
+                    <p>약속 시간에 맞춰 방문하여 작업 시작</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>청소 진행</h3>
+                    <p>전문 장비와 세제로 꼼꼼하게 청소</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>최종 점검</h3>
+                    <p>고객 확인 후 마무리 및 정리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PRICE</span>
+                <h2>청소 가격</h2>
+                <p>평수와 청소 범위에 따라 변동됩니다</p>
+            </div>
+
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>범위</th>
+                            <th>참고 가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">소형 (10평 이하)</td>
+                            <td>원룸, 오피스텔</td>
+                            <td><span class="price">150,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">중형 (10~20평)</td>
+                            <td>투룸, 소형 아파트</td>
+                            <td><span class="price">250,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">대형 (20~30평)</td>
+                            <td>중대형 아파트</td>
+                            <td><span class="price">350,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">특대형 (30평 이상)</td>
+                            <td>대형 아파트, 주택</td>
+                            <td><span class="price">450,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">정기 청소</td>
+                            <td>월 1~4회</td>
+                            <td><span class="price">협의</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--light-blue); padding: 30px; border-radius: 15px; margin-top: 30px;">
+                <p style="text-align: center; color: var(--gray-dark); font-weight: 600;">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 10px;">discount</span>
+                    정기 계약 시 할인 혜택이 제공됩니다
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">BENEFITS</span>
+                <h2>정기 청소 혜택</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">paid</span>
+                    </div>
+                    <h3>가격 할인</h3>
+                    <p>정기 계약 시 최대 30% 할인 혜택</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">favorite</span>
+                    </div>
+                    <h3>전담 관리사</h3>
+                    <p>동일한 관리사가 지속적으로 관리</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <h3>우선 예약</h3>
+                    <p>원하는 날짜에 우선 예약 가능</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">check_circle</span>
+                    </div>
+                    <h3>품질 보장</h3>
+                    <p>지속적인 관리로 높은 청결 상태 유지</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">flash_on</span>
+                    </div>
+                    <h3>긴급 서비스</h3>
+                    <p>긴급 상황 시 추가 청소 지원</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">auto_awesome</span>
+                    </div>
+                    <h3>맞춤 서비스</h3>
+                    <p>고객 요구에 맞춘 청소 범위 조정</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: var(--white); text-align: center;">
+        <div class="content-container">
+            <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 20px;">깨끗한 공간, 지금 시작하세요</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.95;">입주부터 정기 관리까지, 일개미에게 맡겨주세요</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="material-icons">description</span>
+                    무료 견적 받기
+                </a>
+                <a href="tel:1588-0000" class="btn btn-outline">
+                    <span class="material-icons">phone</span>
+                    1588-0000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

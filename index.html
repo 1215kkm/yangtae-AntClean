@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일개미 청소 - 보이지 않는 곳까지 완벽하게</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        /* 페이지별 스타일 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            color: var(--white);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Quick Menu */
+        .quick-menu {
+            background: var(--white);
+            padding: 0;
+            position: relative;
+            margin-top: -80px;
+            z-index: 10;
+        }
+
+        .quick-menu-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .quick-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            background: var(--white);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quick-item {
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-right: 1px solid var(--gray-light);
+        }
+
+        .quick-item:last-child {
+            border-right: none;
+        }
+
+        .quick-item:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .quick-item:hover .quick-icon {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .quick-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s;
+        }
+
+        .quick-icon .material-icons {
+            font-size: 40px;
+            color: var(--primary-blue);
+        }
+
+        .quick-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .quick-item p {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .quick-item:hover p {
+            color: var(--white);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 40px;
+            background: var(--gray-light);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .stat-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--gray-light);
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            background: var(--primary-blue);
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 40px;
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 100px 40px;
+            background: var(--gray-light);
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto 60px;
+        }
+
+        .news-header h2 {
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-date {
+            font-size: 14px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .news-content h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--black);
+        }
+
+        .news-content p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quick-menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .quick-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">No.1 청소 전문 기업</p>
+                <h1 class="hero-title">보이지 않는 곳까지<br>완벽하게</h1>
+                <p class="hero-description">일개미는 고객의 공간을 단순한 작업 대상이 아닌 책임져야 할 결과물로 생각합니다. 15년의 경험과 전문성으로 최상의 청소 서비스를 제공합니다.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <span class="material-icons">description</span>
+                        무료 견적 받기
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline">
+                        <span class="material-icons">photo_library</span>
+                        작업 사례 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Menu -->
+    <section class="quick-menu">
+        <div class="quick-menu-container">
+            <div class="quick-menu-grid">
+                <div class="quick-item" onclick="location.href='service-exterior.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">apartment</span>
+                    </div>
+                    <h3>외벽청소</h3>
+                    <p>고층 건물 전문</p>
+                </div>
+                <div class="quick-item" onclick="location.href='service-special.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">home_repair_service</span>
+                    </div>
+                    <h3>특수청소</h3>
+                    <p>방치 공간 정리</p>
+                </div>
+                <div class="quick-item" onclick="location.href='service-construction.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">construction</span>
+                    </div>
+                    <h3>준공청소</h3>
+                    <p>공사 후 마무리</p>
+                </div>
+                <div class="quick-item" onclick="location.href='service-residential.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">home</span>
+                    </div>
+                    <h3>입주청소</h3>
+                    <p>주거 공간 관리</p>
+                </div>
+                <div class="quick-item" onclick="location.href='service-complex.html'">
+                    <div class="quick-icon">
+                        <span class="material-icons">location_city</span>
+                    </div>
+                    <h3>단지관리</h3>
+                    <p>정기 관리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-header">
+                <span class="section-badge">NO.1</span>
+                <h2>대한민국 청소 전문 기업</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="2500">0</div>
+                    <div class="stat-label">누적 시공 건수</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="98">0</div>
+                    <div class="stat-label">고객 만족도 (%)</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="15">0</div>
+                    <div class="stat-label">경력 연수 (년)</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="24">0</div>
+                    <div class="stat-label">전문 인력 (명)</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2>전문 서비스</h2>
+            <p>일개미의 모든 서비스는 철저한 안전 관리와 전문 기술로 진행됩니다</p>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn active">전체</button>
+            <button class="tab-btn">외벽청소</button>
+            <button class="tab-btn">특수청소</button>
+            <button class="tab-btn">입주청소</button>
+            <button class="tab-btn">기타</button>
+        </div>
+        <div class="services-grid">
+            <div class="card" onclick="location.href='service-exterior.html'">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="외벽청소">
+                    <div class="card-badge">인기</div>
+                </div>
+                <div class="card-content">
+                    <h3>외벽청소</h3>
+                    <p>고층 건물 유리/석재/패널 전문 관리. 로프 액세스와 고소작업차를 활용한 안전한 청소</p>
+                    <a href="service-exterior.html" class="card-link">
+                        자세히 보기
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" onclick="location.href='service-special.html'">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=600&q=80" alt="특수청소">
+                    <div class="card-badge">전문</div>
+                </div>
+                <div class="card-content">
+                    <h3>특수청소</h3>
+                    <p>방치된 공간 정리, 악취 제거, 살균 소독까지 전문 장비로 완벽하게</p>
+                    <a href="service-special.html" class="card-link">
+                        자세히 보기
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" onclick="location.href='service-construction.html'">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="준공청소">
+                </div>
+                <div class="card-content">
+                    <h3>준공청소</h3>
+                    <p>공사 후 잔재물 제거, 먼지와 페인트 자국까지 깨끗하게</p>
+                    <a href="service-construction.html" class="card-link">
+                        자세히 보기
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="news-header">
+            <h2>NEWS ROOM</h2>
+            <div class="tabs">
+                <button class="tab-btn active">전체보기</button>
+                <button class="tab-btn">공지사항</button>
+                <button class="tab-btn">청소 팁</button>
+                <button class="tab-btn">FAQ</button>
+            </div>
+        </div>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=80" alt="뉴스1">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">2024.11.15</div>
+                    <h4>고층 외벽은 왜 전문팀에게 맡겨야 할까?</h4>
+                    <p>안전장비와 전문 기술이 필요한 고층 외벽청소의 중요성</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=400&q=80" alt="뉴스2">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">2024.11.10</div>
+                    <h4>특수청소 시 자주 발생하는 문제 5가지</h4>
+                    <p>전문가가 알려주는 특수청소 주의사항</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=400&q=80" alt="뉴스3">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">2024.11.05</div>
+                    <h4>입주청소 vs 거주청소 차이점</h4>
+                    <p>목적에 맞는 청소 서비스 선택 가이드</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="뉴스4">
+                </div>
+                <div class="news-content">
+                    <div class="news-date">2024.10.28</div>
+                    <h4>준공청소가 중요한 이유</h4>
+                    <p>성공적인 오픈을 위한 필수 체크리스트</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단지/시설청소 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Service Hero -->
+    <div class="service-hero">
+        <div class="service-hero-content"">
+            <h1>단지/시설청소</h1>
+            <p>아파트, 오피스텔, 상업시설의 공용 공간을 정기적으로 관리합니다</p>
+            <div class="breadcrumb">
+                <a href="index.html">홈</a>
+                <span>›</span>
+                <a href="services.html">서비스</a>
+                <span>›</span>
+                <span>단지/시설청소</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Service LNB -->
+    <section style="background: var(--white); border-bottom: 2px solid var(--gray-light); position: sticky; top: 120px; z-index: 100;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+            <div class="service-lnb">
+                <a href="service-exterior.html" class="lnb-item" data-service="exterior">
+                    <span class="material-icons">apartment</span>
+                    <span>외벽청소</span>
+                </a>
+                <a href="service-special.html" class="lnb-item" data-service="special">
+                    <span class="material-icons">home_repair_service</span>
+                    <span>특수청소</span>
+                </a>
+                <a href="service-construction.html" class="lnb-item" data-service="construction">
+                    <span class="material-icons">construction</span>
+                    <span>준공청소</span>
+                </a>
+                <a href="service-residential.html" class="lnb-item" data-service="residential">
+                    <span class="material-icons">home</span>
+                    <span>상가/주거청소</span>
+                </a>
+                <a href="service-complex.html" class="lnb-item" data-service="complex">
+                    <span class="material-icons">location_city</span>
+                    <span>단지/시설청소</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="content-container">
+            <div class="content-service">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" 
+                         alt="단지관리" >
+                </figure>
+                <div>
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 30px;">단지/시설 정기 관리</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 20px;">
+                        아파트, 오피스텔, 상가 등 다세대 주거 시설과 상업 시설의 공용 공간을 
+                        정기적으로 관리하여 쾌적한 환경을 유지합니다.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 30px;">
+                        전문 관리팀이 체계적인 계획에 따라 청소하여 시설물의 가치를 높이고 
+                        입주민의 만족도를 높입니다.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-blue">
+                            <span class="material-icons">description</span>
+                            계약 문의
+                        </a>
+                        <a href="portfolio.html" class="btn" style="background: var(--gray-light); color: var(--black);">
+                            <span class="material-icons">photo_library</span>
+                            관리 사례
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Features -->
+            <div class="section-header">
+                <span class="section-badge">FEATURES</span>
+                <h2>관리 서비스 특징</h2>
+            </div>
+
+            <div class="service-features">
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">apartment</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>공용 공간 관리</h3>
+                        <p>로비, 복도, 계단, 엘리베이터 등 공용 공간 청소</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">delete</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>쓰레기 관리</h3>
+                        <p>분리수거장, 음식물 쓰레기장 정리 및 관리</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">local_parking</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>주차장 청소</h3>
+                        <p>지하주차장 바닥 청소 및 먼지 제거</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">grass</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>외부 환경 정리</h3>
+                        <p>건물 외부, 조경 주변 청소 및 정리</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">window</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>유리창 관리</h3>
+                        <p>공용 구역 유리창 정기 세척</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">report</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>보고서 제공</h3>
+                        <p>월간 청소 보고서 및 개선 제안</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Scope Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">SCOPE</span>
+                <h2>관리 범위</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div style="background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                    <div style="width: 80px; height: 80px; background: var(--light-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span class="material-icons" style="font-size: 40px; color: var(--primary-blue);">holiday_village</span>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px;">아파트/빌라</h3>
+                    <ul style="list-style: none; text-align: left; color: var(--gray); line-height: 1.8;">
+                        <li>• 로비 및 복도 청소</li>
+                        <li>• 계단 및 엘리베이터</li>
+                        <li>• 주차장 관리</li>
+                        <li>• 분리수거장 정리</li>
+                    </ul>
+                </div>
+
+                <div style="background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                    <div style="width: 80px; height: 80px; background: var(--light-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span class="material-icons" style="font-size: 40px; color: var(--primary-blue);">business</span>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px;">오피스 빌딩</h3>
+                    <ul style="list-style: none; text-align: left; color: var(--gray); line-height: 1.8;">
+                        <li>• 로비 및 공용 화장실</li>
+                        <li>• 엘리베이터 홀</li>
+                        <li>• 복도 및 계단</li>
+                        <li>• 외부 유리창</li>
+                    </ul>
+                </div>
+
+                <div style="background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                    <div style="width: 80px; height: 80px; background: var(--light-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span class="material-icons" style="font-size: 40px; color: var(--primary-blue);">storefront</span>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px;">상업시설</h3>
+                    <ul style="list-style: none; text-align: left; color: var(--gray); line-height: 1.8;">
+                        <li>• 매장 공용 공간</li>
+                        <li>• 화장실 및 휴게실</li>
+                        <li>• 주차장</li>
+                        <li>• 외부 입구</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PRICE</span>
+                <h2>정기 관리 비용</h2>
+                <p>시설 규모와 관리 범위에 따라 맞춤 견적을 제공합니다</p>
+            </div>
+
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                            <th>참고 가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">소형 단지</td>
+                            <td>50세대 이하</td>
+                            <td><span class="price">월 200만원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">중형 단지</td>
+                            <td>50~200세대</td>
+                            <td><span class="price">월 500만원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">대형 단지</td>
+                            <td>200세대 이상</td>
+                            <td><span class="price">월 1,000만원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">상업시설</td>
+                            <td>규모에 따라</td>
+                            <td><span class="price">협의</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--light-blue); padding: 30px; border-radius: 15px; margin-top: 30px;">
+                <p style="text-align: center; color: var(--gray-dark); font-weight: 600;">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 10px;">handshake</span>
+                    1년 이상 장기 계약 시 특별 할인 혜택을 제공합니다
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">BENEFITS</span>
+                <h2>정기 관리 계약 혜택</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>전담 팀 배정</h3>
+                    <p>해당 시설 전담 관리팀을 배정하여 일관된 관리</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <h3>유연한 일정</h3>
+                    <p>시설 상황에 맞는 청소 일정 조율 가능</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">inventory</span>
+                    </div>
+                    <h3>소모품 제공</h3>
+                    <p>청소용 소모품 및 위생 용품 제공</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">emergency</span>
+                    </div>
+                    <h3>긴급 대응</h3>
+                    <p>돌발 상황 발생 시 즉시 대응 서비스</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">assessment</span>
+                    </div>
+                    <h3>정기 보고</h3>
+                    <p>월간/분기별 관리 현황 보고서 제공</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">verified</span>
+                    </div>
+                    <h3>품질 보증</h3>
+                    <p>지속적인 품질 관리 및 개선 활동</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: var(--white); text-align: center;">
+        <div class="content-container">
+            <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 20px;">시설 관리 계약 문의</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.95;">전문팀이 체계적으로 관리해드립니다</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="material-icons">description</span>
+                    계약 문의하기
+                </a>
+                <a href="tel:1588-0000" class="btn btn-outline">
+                    <span class="material-icons">phone</span>
+                    1588-0000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

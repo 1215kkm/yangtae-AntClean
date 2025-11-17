@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특수청소 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Service Hero -->
+    <div class="service-hero">
+        <div class="service-hero-content"">
+            <h1>특수청소</h1>
+            <p>일반 청소로는 불가능한 방치된 공간, 사건·사고 현장을 전문 기술로 완벽하게 처리합니다</p>
+            <div class="breadcrumb">
+                <a href="index.html">홈</a>
+                <span>›</span>
+                <a href="services.html">서비스</a>
+                <span>›</span>
+                <span>특수청소</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Service LNB -->
+    <section style="background: var(--white); border-bottom: 2px solid var(--gray-light); position: sticky; top: 120px; z-index: 100;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+            <div class="service-lnb">
+                <a href="service-exterior.html" class="lnb-item" data-service="exterior">
+                    <span class="material-icons">apartment</span>
+                    <span>외벽청소</span>
+                </a>
+                <a href="service-special.html" class="lnb-item" data-service="special">
+                    <span class="material-icons">home_repair_service</span>
+                    <span>특수청소</span>
+                </a>
+                <a href="service-construction.html" class="lnb-item" data-service="construction">
+                    <span class="material-icons">construction</span>
+                    <span>준공청소</span>
+                </a>
+                <a href="service-residential.html" class="lnb-item" data-service="residential">
+                    <span class="material-icons">home</span>
+                    <span>상가/주거청소</span>
+                </a>
+                <a href="service-complex.html" class="lnb-item" data-service="complex">
+                    <span class="material-icons">location_city</span>
+                    <span>단지/시설청소</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="content-container">
+            <div class="content-service">
+                <figure>
+                    <h2 style="font-size: 36px; font-weight: 900; margin-bottom: 30px;">전문 특수청소 서비스</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 20px;">
+                        특수청소는 일반적인 청소 방법으로는 해결할 수 없는 심각하게 오염되거나 
+                        방치된 공간을 전문 장비와 기술로 정리하는 서비스입니다.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 30px;">
+                        쓰레기 더미, 악취, 곰팡이, 해충 등의 문제를 해결하고, 
+                        살균·소독·방역까지 완료하여 다시 사용 가능한 공간으로 만듭니다.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-blue">
+                            <span class="material-icons">description</span>
+                            견적 문의
+                        </a>
+                        <a href="tel:1588-0000" class="btn" style="background: var(--gray-light); color: var(--black);">
+                            <span class="material-icons">phone</span>
+                            긴급 출동
+                        </a>
+                    </div>
+                </figure>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=80" 
+                         alt="특수청소" >
+                </div>
+            </div>
+
+            <!-- Service Types -->
+            <div class="section-header">
+                <span class="section-badge">SERVICE TYPES</span>
+                <h2>특수청소 종류</h2>
+            </div>
+
+            <div class="service-features">
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">delete_sweep</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>쓰레기집 청소</h3>
+                        <p>오랜 기간 방치되어 쓰레기가 쌓인 공간을 정리하고 폐기물을 처리합니다</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">air</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>악취 제거</h3>
+                        <p>오존 탈취기와 전문 약품으로 심한 악취를 완전히 제거합니다</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">water_damage</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>곰팡이 제거</h3>
+                        <p>벽면, 천장의 곰팡이를 제거하고 재발 방지 처리를 합니다</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">pest_control</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>방역 소독</h3>
+                        <p>살균 소독 및 해충 방제로 위생적인 환경을 만듭니다</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">local_hospital</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>사건 현장 정리</h3>
+                        <p>사건·사고 현장을 신속하고 전문적으로 정리합니다 (비공개 처리)</p>
+                    </div>
+                </div>
+
+                <div class="service-feature">
+                    <div class="service-feature-icon">
+                        <span class="material-icons">home</span>
+                    </div>
+                    <div class="service-feature-content">
+                        <h3>빈집 정리</h3>
+                        <p>장기간 비어있던 집의 먼지, 습기, 해충 문제를 해결합니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PROCESS</span>
+                <h2>작업 진행 과정</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>비공개 상담</h3>
+                    <p>현장 상황을 비공개로 상담하고 방문 일정 조율</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>현장 조사</h3>
+                    <p>오염도 확인 및 작업 범위 결정</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>폐기물 처리</h3>
+                    <p>쓰레기 분류 및 합법적 폐기 처리</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>살균 소독</h3>
+                    <p>전문 약품으로 살균·소독·방역 완료</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">PRICE</span>
+                <h2>특수청소 가격</h2>
+                <p>현장 상황에 따라 변동이 크므로 정확한 견적은 현장 조사 후 제공됩니다</p>
+            </div>
+
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>내용</th>
+                            <th>참고 가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">경미한 정리</td>
+                            <td>일반 쓰레기 정리 (1톤 이하)</td>
+                            <td><span class="price">500,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">중간 규모</td>
+                            <td>쓰레기 + 악취제거 + 소독</td>
+                            <td><span class="price">1,000,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">대규모 정리</td>
+                            <td>전체 폐기물 처리 + 방역</td>
+                            <td><span class="price">2,000,000원~</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">사건 현장</td>
+                            <td>특수 현장 정리 (비공개)</td>
+                            <td><span class="price">협의</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--light-blue); padding: 30px; border-radius: 15px; margin-top: 30px;">
+                <p style="text-align: center; color: var(--gray-dark); font-weight: 600;">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 10px;">lock</span>
+                    모든 특수청소는 비공개로 진행되며, 고객 정보는 철저히 보호됩니다
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">WHY US</span>
+                <h2>일개미 특수청소의 강점</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">lock</span>
+                    </div>
+                    <h3>철저한 비공개</h3>
+                    <p>무표시 차량 사용, 작업복 착용, 고객 정보 보호</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">flash_on</span>
+                    </div>
+                    <h3>신속한 처리</h3>
+                    <p>긴급 상황 시 24시간 내 출동 가능</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">delete_forever</span>
+                    </div>
+                    <h3>폐기물 처리</h3>
+                    <p>관련 법규에 따른 합법적 폐기물 처리</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">shield</span>
+                    </div>
+                    <h3>안전 장비</h3>
+                    <p>방호복, 마스크 등 완전 방호 상태로 작업</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">cleaning_services</span>
+                    </div>
+                    <h3>완벽한 마무리</h3>
+                    <p>정리 후 살균·소독·탈취까지 완료</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <span class="material-icons">support_agent</span>
+                    </div>
+                    <h3>사후 관리</h3>
+                    <p>작업 후에도 필요 시 추가 방문 지원</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: var(--white); text-align: center;">
+        <div class="content-container">
+            <h2 style="font-size: 48px; font-weight: 900; margin-bottom: 20px;">비공개 상담 문의</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.95;">어려운 상황, 전문가에게 맡겨주세요</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">
+                    <span class="material-icons">description</span>
+                    비공개 견적 받기
+                </a>
+                <a href="tel:1588-0000" class="btn btn-outline">
+                    <span class="material-icons">phone</span>
+                    긴급 출동: 1588-0000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>

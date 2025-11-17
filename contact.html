@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적문의 - 일개미 청소</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="breadcrumb">
+            <a href="index.html">홈</a>
+            <span>›</span>
+            <span>견적문의</span>
+        </div>
+        <div class="page-header-content">
+            <h1>견적문의</h1>
+            <p>무료로 견적을 받아보세요. 24시간 이내에 연락드립니다</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="content-container">
+            <div class="contact_wrap">
+                <!-- Contact Form -->
+                <div class="form-section">
+                    <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 30px;">견적 요청서</h2>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>이름 *</label>
+                                <input type="text" required placeholder="홍길동">
+                            </div>
+                            <div class="form-group">
+                                <label>연락처 *</label>
+                                <input type="tel" required placeholder="010-0000-0000">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>이메일</label>
+                            <input type="email" placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>서비스 종류 *</label>
+                            <select required>
+                                <option value="">선택해주세요</option>
+                                <option value="exterior">외벽청소</option>
+                                <option value="special">특수청소</option>
+                                <option value="construction">준공청소</option>
+                                <option value="residential">입주/이사청소</option>
+                                <option value="complex">단지/시설관리</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>지역</label>
+                                <input type="text" placeholder="서울시 강남구">
+                            </div>
+                            <div class="form-group">
+                                <label>평수/규모</label>
+                                <input type="text" placeholder="30평">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>희망 일정</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>상세 내용</label>
+                            <textarea placeholder="청소가 필요한 공간의 상태, 특이사항 등을 자세히 알려주세요"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; cursor: pointer;">
+                                <input type="checkbox" required style="width: auto; margin-right: 10px;">
+                                <span>개인정보 수집 및 이용에 동의합니다</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-blue" style="width: 100%; padding: 20px; font-size: 18px;">
+                            <span class="material-icons">send</span>
+                            견적 요청하기
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div style="background: var(--gray-light); padding: 40px; border-radius: 15px; margin-bottom: 30px;">
+                        <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 30px;">연락처 정보</h3>
+                        
+                        <div style="display: flex; align-items: start; gap: 20px; margin-bottom: 25px;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-icons" style="color: white; font-size: 28px;">phone</span>
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 5px;">전화번호</div>
+                                <div style="color: var(--gray); font-size: 18px;">1588-0000</div>
+                                <div style="color: var(--gray); font-size: 14px;">평일 09:00 - 18:00</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 20px; margin-bottom: 25px;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-icons" style="color: white; font-size: 28px;">email</span>
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 5px;">이메일</div>
+                                <div style="color: var(--gray); font-size: 18px;">info@ilgaemi.com</div>
+                                <div style="color: var(--gray); font-size: 14px;">24시간 접수 가능</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 20px;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-icons" style="color: white; font-size: 28px;">place</span>
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 5px;">주소</div>
+                                <div style="color: var(--gray); font-size: 18px;">서울특별시 강남구</div>
+                                <div style="color: var(--gray); font-size: 18px;">테헤란로 123, 일개미빌딩 5층</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--light-blue); padding: 30px; border-radius: 15px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--primary-blue);">긴급 상황?</h3>
+                        <p style="color: var(--gray-dark); line-height: 1.8; margin-bottom: 20px;">
+                            긴급한 청소가 필요하신가요?<br>
+                            24시간 긴급 출동 서비스를 이용하세요!
+                        </p>
+                        <a href="tel:1588-0000" class="btn btn-blue" style="width: 100%;">
+                            <span class="material-icons">emergency</span>
+                            긴급 출동: 1588-0000
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--gray-light);">
+        <div class="content-container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>자주 묻는 질문</h2>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>견적은 무료인가요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            네, 모든 견적은 무료입니다. 온라인 문의나 전화 상담 후 필요시 현장 방문하여 
+                            정확한 견적을 제공해드립니다. 현장 방문 견적도 무료로 진행됩니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>견적 후 얼마나 빨리 연락을 받을 수 있나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            일반적으로 24시간 이내에 연락드립니다. 긴급한 경우 전화(1588-0000)로 문의하시면 
+                            즉시 상담이 가능합니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>결제는 어떻게 하나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            현금, 계좌이체, 카드 결제 모두 가능합니다. 작업 완료 후 만족도를 확인하신 뒤 
+                            결제하시면 됩니다. 정기 계약의 경우 별도 협의가 가능합니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>주말이나 공휴일에도 작업이 가능한가요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            네, 주말과 공휴일에도 작업이 가능합니다. 고객님의 일정에 맞춰 유연하게 
+                            일정을 조율해드립니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>작업 시간은 얼마나 걸리나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            작업 종류와 규모에 따라 다릅니다. 일반 입주청소는 4-8시간, 외벽청소는 하루에서 
+                            수일이 소요될 수 있습니다. 정확한 소요 시간은 견적 시 안내해드립니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>작업 중 문제가 생기면 어떻게 하나요?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            모든 작업자는 보험에 가입되어 있으며, 만일의 사고에 대비하고 있습니다. 
+                            작업 중 문제 발생 시 즉시 연락드리고 해결방안을 제시해드립니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="content-section" style="background: var(--white); padding: 0;">
+        <div style="width: 100%; height: 400px; background: var(--gray-light); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center;">
+                <span class="material-icons" style="font-size: 80px; color: var(--primary-blue); margin-bottom: 20px;">location_on</span>
+                <div style="font-size: 24px; font-weight: 700; color: var(--black);">서울특별시 강남구 테헤란로 123</div>
+                <div style="font-size: 18px; color: var(--gray); margin-top: 10px;">일개미빌딩 5층</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="script/script.js"></script>
+</body>
+</html>
